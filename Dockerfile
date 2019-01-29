@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER Cowbotic cowbotic@protonmail.com
+MAINTAINER carlosmonzon2010 carlosmonzon2010@gmail.com
 
 # basic flask environment
 RUN apk add --no-cache gcc linux-headers musl-dev python3-dev nginx uwsgi uwsgi-python3 bash git\
@@ -17,7 +17,7 @@ RUN mkdir ${APP_DIR} \
 
 VOLUME [${APP_DIR}]
 WORKDIR ${APP_DIR}
-RUN git clone https://github.com/cowbotic/app-stack.git ${APP_DIR}
+RUN git clone https://github.com/carlosmonzon2010/app-stack.git ${APP_DIR}
 
 # copy config files into filesystem
 COPY config_files/flask_app.ini /flask_app.ini
